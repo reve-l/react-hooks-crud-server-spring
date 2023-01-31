@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="listTuto" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="021e7f72-18ab-46ce-aff5-34c03c72db12">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="title" class="java.lang.String"/>
+	<field name="nbpage" class="java.lang.Integer"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="auteur" class="java.lang.String"/>
+	<field name="dateEdit" class="java.util.Date"/>
+	<field name="published" class="java.lang.Boolean"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="95" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="95" forecolor="#330000" backcolor="rgba(23, 7, 7, 0.6862745)" uuid="06e51fb5-2acf-4c94-b849-a25c73ac684a"/>
+			</rectangle>
+			<staticText>
+				<reportElement stretchType="ContainerHeight" mode="Opaque" x="0" y="0" width="802" height="95" forecolor="#FCF5F5" backcolor="#635353" uuid="4985d48b-f6ab-4c26-925b-fd6ddfc1c1a4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="34" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTE DES TUTORIELS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="730" y="22" width="50" height="50" uuid="b7a34c0f-3d89-4bd4-a7da-e44bae812a16"/>
+				<imageExpression><![CDATA["C:/Users/HP/Pictures/spring.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="670" y="40" width="50" height="50" uuid="9dba2843-dfa8-427c-9e63-f3a7b3079916"/>
+				<imageExpression><![CDATA["C:/Users/HP/Pictures/reactjs.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="88" splitType="Stretch">
+			<staticText>
+				<reportElement x="131" y="46" width="100" height="30" uuid="fe374c5d-b8da-44db-a102-2c09fc1f586e"/>
+				<text><![CDATA[Tititre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="46" width="100" height="30" uuid="ca5aa84b-acf3-4bf1-b6d2-468e4d56adb0"/>
+				<text><![CDATA[Pages]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="331" y="46" width="100" height="30" uuid="33f25ecd-b67e-43c4-b2df-bebbbe192229"/>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="46" width="69" height="30" uuid="01eade48-d5a4-49fe-9393-18baf42907d8"/>
+				<text><![CDATA[Auteur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="46" width="100" height="30" uuid="e26e75d9-d0e9-4aff-bcd3-006e544601c6"/>
+				<text><![CDATA[Parution]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="46" width="100" height="30" uuid="51c8c718-af4d-46ec-98b8-d0d5e1ee194b"/>
+				<text><![CDATA[Etat]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="131" y="0" width="100" height="30" uuid="fdbbf71b-0f8e-4fc6-8e13-04a1ce0bcdce"/>
+				<textFieldExpression><![CDATA[$F{title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="0" width="100" height="30" uuid="78032cc0-f56f-43e5-a774-a666edcbf670"/>
+				<textFieldExpression><![CDATA[$F{nbpage}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="331" y="0" width="100" height="30" uuid="29615935-6e41-4fe0-b26e-7ce72f671ca4"/>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="431" y="0" width="69" height="30" uuid="45eb8be1-6db1-4911-a0b3-f789b0a2aff9"/>
+				<textFieldExpression><![CDATA[$F{auteur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="100" height="30" uuid="cc11e1f6-b1a5-4f15-bbe1-a958bb15da18"/>
+				<textFieldExpression><![CDATA[$F{dateEdit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="100" height="30" uuid="939dffe7-4c34-40d9-aec8-b6256c972e62"/>
+				<textFieldExpression><![CDATA[$F{published}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
