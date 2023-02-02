@@ -48,7 +48,7 @@ public class TutoStateController {
 					JRBeanCollectionDataSource beanCollectionDataSource  = new JRBeanCollectionDataSource(tutorialRepository.findAll());
 					
 					JasperReport compileReport = JasperCompileManager
-							.compileReport(new FileInputStream("C:\\React-project\\Serveurs\\spring\\react-hooks-crud-server-2\\listTuto.jrxml"));
+							.compileReport(new FileInputStream("C:\\React-project\\Serveurs\\spring\\react-hooks-crud-server-2\\src\\main\\resources\\state\\listTuto.jrxml"));
 
 				
 					Map<String, Object> map = new HashMap<>();
@@ -64,7 +64,7 @@ public class TutoStateController {
 					
 					HttpHeaders headers = new HttpHeaders() ;
 					
-					headers.set("Content-Disposition", "inline; filename=citiesreport.pdf");
+					//headers.set("Content-Disposition", "inline; filename=listTuto.pdf");
 					headers.set(HttpHeaders.CONTENT_DISPOSITION,"inline;filename=listTuto.pdf");
 					
 					System.out.println(ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF).body(data));
