@@ -34,7 +34,7 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = {"http://localhost:8080"}, allowCredentials = "false")
-public class TutoStateController {
+public class TutoReportController {
 
 	
 	 	@Autowired
@@ -48,7 +48,7 @@ public class TutoStateController {
 					JRBeanCollectionDataSource beanCollectionDataSource  = new JRBeanCollectionDataSource(tutorialRepository.findAll());
 					
 					JasperReport compileReport = JasperCompileManager
-							.compileReport(new FileInputStream("C:\\React-project\\Serveurs\\spring\\react-hooks-crud-server-2\\src\\main\\resources\\state\\listTuto.jrxml"));
+							.compileReport(new FileInputStream("C:\\React-project\\Serveurs\\spring\\react-hooks-crud-server-2\\src\\main\\resources\\reports\\listTuto.jrxml"));
 
 				
 					Map<String, Object> map = new HashMap<>();
